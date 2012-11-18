@@ -14,7 +14,7 @@ function curry(fn) {
     if (arguments.length < fn.length) {
       var args = makeArray(arguments);
       return function () {
-        return that.apply(this, args.concat(makeArray(arguments)));
+        return curried.apply(this, args.concat(makeArray(arguments)));
       }
     } else {
       return fn.apply(this, arguments);
