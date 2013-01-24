@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mocha</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="mocha.css" />
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script src="mocha.js"></script>
+    <script>mocha.setup('bdd')</script>
+    <script src="../build/build.js"></script>
+    <script src="test.js"></script>
+    <script>
+      window.testsPassed = null;
+      function handleResults(runner) {
+        runner.on('fail', function(test, err){
+          window.testsPassed = false;
+        });
+        runner.on('end', function(){
+          window.testsPassed = window.testsPassed == null;
+        });
+      }
+      mocha.globals(['navigator', 'getInterface']);
+      handleResults(mocha.run());
+    </script>
+  </body>
+</html>
