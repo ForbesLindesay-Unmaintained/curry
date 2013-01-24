@@ -1,4 +1,4 @@
-
+<a href="https://jepso-ci.com/ForbesLindesay/curry"><img src="https://jepso-ci.com/ForbesLindesay/curry.svg" align="right" alt="jepso-ci status" /></a>
 # curry
 
   Curry a function in JavaScript
