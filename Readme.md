@@ -26,3 +26,5 @@ sumFour(5, 5, 5)(5);// => 20
 ## License
 
   MIT
+
+![viewcount](https://viewcount.jepso.com/count/ForbesLindesay/curry.png)
